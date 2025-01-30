@@ -9,9 +9,50 @@
 /* ==================================================
    GLOBAL VARIABLES & RESET
 ================================================== */ 
-  * {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box; /* keeps child elements contained within parent element */
-  }
+* {
+margin: 0;
+padding: 0; 
+box-sizing: border-box; /* keeps child elements contained within parent element */
+}
+
+@font-face {
+    font-family: "norseBold";
+    src: url(./NorseBold.otf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./yggdrasil-tree.png);
+}
+
+/* ==================================================
+   MAIN CONTENT
+================================================== */ 
+
+.library-wrap {
+    height: 80vh;
+    width: 60vw;
+    background-color: rgba(42, 59, 46);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.library-wrap h1 {
+    font-family: norseBold;
+    color: #d4af37;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #d4af37;
+    text-shadow: 2px 2px #241503;
+    font-size: 48px;
+    padding: 20px;
+}
+
+.book-display {
+
+}
   
