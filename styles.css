@@ -84,6 +84,7 @@ body {
 .book-display h3 { /* book titles */
     font-size: 30px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .book-display h4 { /* author names */
