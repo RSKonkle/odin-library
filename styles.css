@@ -1,0 +1,17 @@
+/* STYLE SHEET */
+
+/* ==================================================
+   PROJECT: The Odin Project - Library
+   AUTHOR: Reagan Konkle
+   LAST UPDATED: 2025-01-30
+================================================== */
+
+/* ==================================================
+   GLOBAL VARIABLES & RESET
+================================================== */ 
+  * {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /* keeps child elements contained within parent element */
+  }
+  
