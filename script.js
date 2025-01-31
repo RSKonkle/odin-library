@@ -13,7 +13,7 @@ function Book(title, author, pages, read) { // object constructor function
 function addBookToLibrary(title, author, pages, read) {
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
-    displayBooks(myLibrary); // Update book list after adding
+    displayBooks(); // Update book list after adding
 }
 
 function removeBook(bookId) {
@@ -48,6 +48,11 @@ function displayBooks() {
         const bookReadCheckbox = document.createElement("input");
         bookReadCheckbox.type = "checkbox";
         bookReadCheckbox.checked = book.read;
+
+        // Add event listener to update stored "read" status when checkbox is clicked
+        bookReadCheckbox.addEventListener("change", () => {
+            book.read = bookReadCheckbox.checked;
+        });
 
         // Add text content to newly created variables
         bookTitle.textContent = book.title;
