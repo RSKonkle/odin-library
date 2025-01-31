@@ -18,7 +18,6 @@ function addBookToLibrary(title, author, pages, read) {
 
 function removeBook(bookId) {
     myLibrary = myLibrary.filter(book => {return book.id !== bookId });
-    myLibrary.forEach(book => console.log(book));
     displayBooks(); // Refresh UI
 }
 
