@@ -55,6 +55,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
+    overflow-x: visible;
+    scrollbar-width: none;
 }
 
 .library-wrap h1 {
@@ -66,15 +69,13 @@ body {
     font-size: 48px;
     padding: 20px;
     margin-bottom: 20px;
+
 }
 
 .catalog {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    overflow-y: scroll;
-    overflow-x: visible;
-    scrollbar-width: none;
     padding: 20px 30px;
 }
 
