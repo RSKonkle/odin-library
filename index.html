@@ -8,6 +8,25 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="showFormBtn" class="new-book">+ Add Book</button>
+            <!-- Form (Hidden Initially) -->
+            <form id="bookForm" style="display: none;">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+        
+                <label for="author">Author:</label>
+                <input type="text" id="author" required>
+        
+                <label for="pages">Pages:</label>
+                <input type="number" id="pages" required>
+        
+                <div class="form-bw">
+                    <label for="read">Read:</label>
+                    <input type="checkbox" id="read">
+                </div>
+
+                <button type="submit">Add Book</button>
+            </form>
     <div class="library-wrap">
         <div class="library-wrap-inner">
             <div class="library-header">
