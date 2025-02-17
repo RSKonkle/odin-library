@@ -2,12 +2,34 @@
 let myLibrary = [];
 const catalog = document.querySelector(".catalog");
 
-function Book(title, author, pages, read) { // object constructor function
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = crypto.randomUUID(); // Generates a unique ID for each book
+// Rework into class, rather than object constructor
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this._read = read;
+        this.id = crypto.randomUUID(); // Unique ID
+    }
+
+    // Getter for read status
+    get read() {
+        return this._read ? "Read" : "Unread";
+    }
+
+    // Setter for read status
+    set read(value) {
+        if (typeof value === "boolean") {
+            this._read = value; // Only update if it's true/false
+        } else {
+            console.log("Read status must be true/false");
+        }
+    }
+
+    // Method to toggle read status
+    toggleRead() {
+        this._read = !this._read;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -47,11 +69,11 @@ function displayBooks() {
         bookReadLabel.textContent = "Read:";
         const bookReadCheckbox = document.createElement("input");
         bookReadCheckbox.type = "checkbox";
-        bookReadCheckbox.checked = book.read;
+        bookReadCheckbox.checked = book.read === "Read";
 
         // Add event listener to update stored "read" status when checkbox is clicked
         bookReadCheckbox.addEventListener("change", () => {
-            book.read = bookReadCheckbox.checked;
+            book.toggleRead();
         });
 
         // Add text content to newly created variables
